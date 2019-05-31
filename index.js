@@ -1,6 +1,5 @@
 const baseURL = 'https://api.github.com'
 const repo = 'learn-co-curriculum/js-ajax-fetch-lab';
-const user_repo = 'jramosch'
 const postData = {
   title: document.getElementById('title').value,
   body: document.getElementById('body').value
