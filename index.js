@@ -1,5 +1,6 @@
-const baseURL = 'https://api.github.com'
+const baseURL = 'https://api.github.com';
 const repo = 'learn-co-curriculum/js-ajax-fetch-lab';
+const user_repo = `${user}/js-ajax-fetch-lab`;
 const postData = {
   title: document.getElementById('title').value,
   body: document.getElementById('body').value
@@ -27,7 +28,7 @@ function showResults(json) {
 
 function createIssue() {
   //use this function to create an issue based on the values input in index.html
-  fetch(`${baseURL}/repos/${user}/js-ajax-fetch-lab/issues)`, {
+  fetch(`${baseURL}/repos/${user_repo}/issues)`, {
     method: 'POST',
     body: JSON.stringify(postData),
     headers: {
