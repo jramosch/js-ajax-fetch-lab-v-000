@@ -35,7 +35,7 @@ function createIssue() {
       Authorization: `token ${getToken()}`
     }
   }).then(response => response.json())
-    .then(json => getIssues(json));
+    .then(json => getIssues());
 }
 
 function getIssues() {
