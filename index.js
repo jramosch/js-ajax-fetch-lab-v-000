@@ -27,7 +27,6 @@ function showResults(json) {
 }
 
 function createIssue() {
-  //use this function to create an issue based on the values input in index.html
   fetch(`${baseURL}/repos/${user_repo}/issues`, {
     method: 'POST',
     body: JSON.stringify(postData),
