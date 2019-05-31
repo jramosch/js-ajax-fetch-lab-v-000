@@ -1,10 +1,7 @@
 const baseURL = 'https://api.github.com';
 const repo = 'learn-co-curriculum/js-ajax-fetch-lab';
 const user_repo = 'jramosch/js-ajax-fetch-lab';
-const postData = {
-  title: document.getElementById('title').value,
-  body: document.getElementById('body').value
-}
+
 
 function getToken() {
   //change to your token to run in browser, but set
@@ -27,6 +24,10 @@ function showResults(json) {
 }
 
 function createIssue() {
+  const postData = {
+    title: document.getElementById('title').value,
+    body: document.getElementById('body').value
+  }
   fetch(`${baseURL}/repos/${user_repo}/issues`, {
     method: 'POST',
     body: JSON.stringify(postData),
